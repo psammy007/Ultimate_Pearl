@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".OrdersFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:text="Unpaid Bills"
+                app:switchMinWidth="5dp"
+                android:id="@+id/unpaidSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:paddingHorizontal="5dp" />
+
+            <TextView
+                android:id="@+id/unpaidTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Unpaid Amount :"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:textColor="@color/primaryDark"
+                android:paddingHorizontal="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:text="100 \u20B9"
+                android:id="@+id/unpaidAmount"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ordersList"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/message"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_marginTop="120dp"
+                android:text="No orders yet.\nTap + order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="6dp"
+                android:visibility="gone"
+                android:layout_marginTop="80dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/createOrder"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_add"
+                android:padding="8dp"
+                android:background="@drawable/round_border"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

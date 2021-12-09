@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Jinendra Enterprises</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="email_hint">user@company.com</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="log_in">Log in</string>
+    <string name="new_user_signup">New User? SIgnup</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
+    <string name="masters">Masters</string>
+    <string name="search">Search</string>
+    <string name="rupee">\u20B9</string>
+</resources>

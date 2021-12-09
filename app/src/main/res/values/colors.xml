@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2293C6</color>
+    <color name="primaryDark">#053459</color>
+    <color name="primaryLight">#2293C6</color>
+    <color name="red">#D10A0A</color>
+    <color name="green">#1D8A09</color>
+    <color name="grey">#848884</color>
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

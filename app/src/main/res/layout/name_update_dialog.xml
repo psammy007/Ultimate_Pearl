@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:minWidth="300dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:background="@drawable/round_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="18sp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/primaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:text="Are you sure want to delete your account? All the data will be lost permanently..."/>
+
+
+            <LinearLayout
+                android:gravity="end"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:minWidth="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textStyle="bold"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"/>
+
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:layout_marginEnd="10dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/red"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

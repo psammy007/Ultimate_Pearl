@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "361815815723",
+    "firebase_url": "https://ultimate-pearl-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ultimate-pearl",
+    "storage_bucket": "ultimate-pearl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361815815723:android:91d6bf95f138c0eb501c6e",
+        "android_client_info": {
+          "package_name": "com.example.ultimatepearl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361815815723-qf4mhvo8osbntfp30cbtn3c56qp7sum0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1tu_kp0YjOMwHfMkBtZ5UT3dwY33Lf3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361815815723-qf4mhvo8osbntfp30cbtn3c56qp7sum0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

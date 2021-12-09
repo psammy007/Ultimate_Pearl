@@ -1,0 +1,2 @@
+rootProject.name = "Ultimate Pearl"
+include ':app'

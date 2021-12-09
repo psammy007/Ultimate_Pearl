@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Select area"
+        android:paddingHorizontal="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="Andheri"
+        android:inputType="textCapWords"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="3dp"
+        android:background="@drawable/textview_border"
+        app:layout_constraintTop_toBottomOf="@id/msg"/>
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Search"
+        android:minWidth="0dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/green"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:minWidth="0dp"
+        android:text="Cancel"
+        android:textColor="@color/grey"
+        style="?android:attr/borderlessButtonStyle"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/search"
+        app:layout_constraintTop_toBottomOf="@id/spinner"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.ultimatepearl.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_logInFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.ultimatepearl.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ultimatepearl.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.ultimatepearl.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mastersFragment"
+        android:name="com.example.ultimatepearl.MastersFragment"
+        android:label="fragment_masters"
+        tools:layout="@layout/fragment_masters" >
+        <action
+            android:id="@+id/action_mastersFragment_to_createMasterFragment"
+            app:destination="@id/createMasterFragment" />
+        <action
+            android:id="@+id/action_mastersFragment_to_mastersOrdersFragment"
+            app:destination="@id/mastersOrdersFragment" />
+        <action
+            android:id="@+id/action_mastersFragment_to_masterDetailFragment"
+            app:destination="@id/masterDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createMasterFragment"
+        android:name="com.example.ultimatepearl.CreateMasterFragment"
+        android:label="fragment_create_master"
+        tools:layout="@layout/fragment_create_master" >
+        <argument
+            android:name="masterId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mastersOrdersFragment"
+        android:name="com.example.ultimatepearl.MastersOrdersFragment"
+        android:label="fragment_masters_orders"
+        tools:layout="@layout/fragment_masters_orders" >
+        <argument
+            android:name="masterId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_mastersOrdersFragment_to_orderItemsFragment"
+            app:destination="@id/orderItemsFragment" />
+        <action
+            android:id="@+id/action_mastersOrdersFragment_to_orderSummaryFragment"
+            app:destination="@id/orderSummaryFragment" />
+        <action
+            android:id="@+id/action_mastersOrdersFragment_to_createMasterFragment"
+            app:destination="@id/createMasterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.ultimatepearl.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_createProductFragment"
+            app:destination="@id/createProductFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProductFragment"
+        android:name="com.example.ultimatepearl.CreateProductFragment"
+        android:label="fragment_create_product"
+        tools:layout="@layout/fragment_create_product" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.ultimatepearl.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_createProductFragment"
+            app:destination="@id/createProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderItemsFragment"
+        android:name="com.example.ultimatepearl.OrderItemsFragment"
+        android:label="fragment_order_items"
+        tools:layout="@layout/fragment_order_items" >
+        <argument
+            android:name="masterId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSummaryFragment"
+        android:name="com.example.ultimatepearl.OrderSummaryFragment"
+        android:label="fragment_order_summary"
+        tools:layout="@layout/fragment_order_summary" >
+        <argument
+            android:name="masterId"
+            app:argType="string" />
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/importExportFragment"
+        android:name="com.example.ultimatepearl.ImportExportFragment"
+        android:label="fragment_import_export"
+        tools:layout="@layout/fragment_import_export" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.ultimatepearl.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/salesmanFragment"
+        android:name="com.example.ultimatepearl.SalesmanFragment"
+        android:label="SalesmanFragment"
+        tools:layout="@layout/fragment_salesman">
+        <action
+            android:id="@+id/action_salesmanFragment_to_createSalesmanFragment"
+            app:destination="@id/createSalesmanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSalesmanFragment"
+        android:name="com.example.ultimatepearl.CreateSalesmanFragment"
+        android:label="CreateSalesmanFragment"
+        tools:layout="@layout/fragment_create_salesman">
+        <argument
+            android:name="salesmanId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.ultimatepearl.ReportsFragment"
+        android:label="ReportsFragment"
+        tools:layout="@layout/fragment_reports"/>
+    <fragment
+        android:id="@+id/masterDetailFragment"
+        android:name="com.example.ultimatepearl.MasterDetailFragment"
+        android:label="MasterDetailFragment"
+        tools:layout="@layout/fragment_master_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_masterDetailFragment_to_createMasterFragment"
+            app:destination="@id/createMasterFragment" />
+        <action
+            android:id="@+id/action_masterDetailFragment_to_orderSummaryFragment"
+            app:destination="@id/orderSummaryFragment" />
+        <action
+            android:id="@+id/action_masterDetailFragment_to_orderItemsFragment"
+            app:destination="@id/orderItemsFragment" />
+        <action
+            android:id="@+id/action_masterDetailFragment_to_addReturnsFragment"
+            app:destination="@id/addReturnsFragment" />
+        <action
+            android:id="@+id/action_masterDetailFragment_to_returnsSummaryFragment"
+            app:destination="@id/returnsSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReturnsFragment"
+        android:name="com.example.ultimatepearl.AddReturnsFragment"
+        android:label="AddReturnsFragment"
+        tools:layout="@layout/fragment_add_returns">
+        <argument
+            android:name="masterId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnsSummaryFragment"
+        android:name="com.example.ultimatepearl.ReturnsSummaryFragment"
+        android:label="ReturnsSummaryFragment"
+        tools:layout="@layout/fragment_returns_summary">
+        <argument
+            android:name="masterId"
+            app:argType="string" />
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
